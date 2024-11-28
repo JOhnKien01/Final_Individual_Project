@@ -92,38 +92,24 @@ namespace Final_Individual_Project
         }
         private void Loginbtn_Click(object sender, EventArgs e)
         {
-            // Get the current username and password input
             string enteredUsername = Username.Text;
             string enteredPassword = Password.Text;
 
-            // Simulated user data (replace with database integration if necessary)
-            Dictionary<string, string> userCredentials = new Dictionary<string, string>
-    {
-                { "user", "user123" },
-                { "admin", "admin123" },
-                { "guest", "guest123" },
-                { "john", "john123" },
-                { "eric", "eric123" },
-                 { "kien", "kien123" }
-    };
-
-            // Validate the username and password
-            if (userCredentials.ContainsKey(enteredUsername) && userCredentials[enteredUsername] == enteredPassword)
+            if (UserData.Users.ContainsKey(enteredUsername) && UserData.Users[enteredUsername] == enteredPassword)
             {
-                // Username and password are correct
-                //MessageBox.Show($"Welcome, {enteredUsername}!");
+                MessageBox.Show($"Welcome, {enteredUsername}!");
 
-                // Proceed to the final form
                 Main_Form mainForm = new Main_Form();
                 mainForm.Show();
-                this.Hide(); // Hide the current login form
+                this.Hide();
             }
-             else
+            else
             {
-                // Username or password is incorrect
-                MessageBox.Show("Invalid username or password. Please try again.");
+                MessageBox.Show("Invalid username or password. Please try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-    }
+        }
+
+    
         private void Signupbtn_Click(object sender, EventArgs e)
         {
             Signup signupForm = new Signup();

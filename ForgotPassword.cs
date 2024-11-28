@@ -67,9 +67,29 @@ namespace Final_Individual_Project
 
         private void submitbtn_Click(object sender, EventArgs e)
         {
-            Main_Form mainForm = new Main_Form();
-            mainForm.Show();
-            this.Hide();
+         
+            string username = usernametxt.Text;
+            string newPassword = passwordtxt.Text;
+
+           
+            if (UserData.Users.ContainsKey(username))
+            {
+               
+                UserData.Users[username] = newPassword;
+
+                MessageBox.Show("Password updated successfully. Please log in with your new password.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+               
+                Form1 loginForm = new Form1();
+                loginForm.Show();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Username not found. Please try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
+
     }
 }
+

@@ -78,6 +78,7 @@
     <Compile Include="Trouble login.Designer.cs">
       <DependentUpon>Trouble login.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserData.cs" />
     <EmbeddedResource Include="ForgotPassword.resx">
       <DependentUpon>ForgotPassword.cs</DependentUpon>
     </EmbeddedResource>
