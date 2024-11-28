@@ -28,7 +28,7 @@ namespace Final_Individual_Project
             string input = Username.Text;
 
             // Simulated saved usernames (replace with database integration if necessary)
-            List<string> savedUsernames = new List<string> { "user", "admin", "guest", "john","eric" };
+            List<string> savedUsernames = new List<string> { "user", "admin", "guest", "john","eric", "kien" };
 
             // 1. Real-time Validation: Check if the username is empty
             if (string.IsNullOrWhiteSpace(input))
@@ -58,14 +58,6 @@ namespace Final_Individual_Project
                 Username.SelectionStart = Username.Text.Length; // Reset cursor position
                 return;
             }
-            // 4. Check Saved Usernames
-            if (savedUsernames.Contains(input, StringComparer.OrdinalIgnoreCase))
-            {
-                // Username exists
-                MessageBox.Show($"Welcome back, {input}!");
-                Loginbtn.Enabled = true; // Allow login
-                return;
-            }
         }
         private void label2_Click(object sender, EventArgs e)
         { }
@@ -86,7 +78,8 @@ namespace Final_Individual_Project
                 { "admin", "admin123" },
                 { "guest", "guest123" },
                 { "john", "john123" },
-                { "eric", "eric123" }
+                { "eric", "eric123" },
+                { "kien", "kien123" }
     };
 
             // Check if username exists in the saved records
@@ -110,14 +103,15 @@ namespace Final_Individual_Project
                 { "admin", "admin123" },
                 { "guest", "guest123" },
                 { "john", "john123" },
-                { "eric", "eric123" }
+                { "eric", "eric123" },
+                 { "kien", "kien123" }
     };
 
             // Validate the username and password
             if (userCredentials.ContainsKey(enteredUsername) && userCredentials[enteredUsername] == enteredPassword)
             {
                 // Username and password are correct
-                MessageBox.Show($"Welcome, {enteredUsername}!");
+                //MessageBox.Show($"Welcome, {enteredUsername}!");
 
                 // Proceed to the final form
                 Main_Form mainForm = new Main_Form();

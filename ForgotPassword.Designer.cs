@@ -43,11 +43,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.submitbtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.submitbtn);
             this.panel1.Controls.Add(this.Retrievebtn);
             this.panel1.Controls.Add(this.passwordtxt);
             this.panel1.Controls.Add(this.answertxt);
@@ -98,6 +100,7 @@
             // 
             // comboBox2
             // 
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Items.AddRange(new object[] {
             "Your Nickname",
@@ -116,7 +119,7 @@
             this.backbtn.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.backbtn.ForeColor = System.Drawing.Color.White;
             this.backbtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.backbtn.Location = new System.Drawing.Point(243, 305);
+            this.backbtn.Location = new System.Drawing.Point(307, 305);
             this.backbtn.Name = "backbtn";
             this.backbtn.Size = new System.Drawing.Size(83, 28);
             this.backbtn.TabIndex = 24;
@@ -145,9 +148,9 @@
             this.label5.Font = new System.Drawing.Font("Poor Richard", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(51, 249);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(73, 18);
+            this.label5.Size = new System.Drawing.Size(106, 18);
             this.label5.TabIndex = 20;
-            this.label5.Text = "Password:";
+            this.label5.Text = "New Password:";
             // 
             // nametxt
             // 
@@ -205,6 +208,22 @@
             this.label1.TabIndex = 13;
             this.label1.Text = "User Name:";
             // 
+            // submitbtn
+            // 
+            this.submitbtn.BackColor = System.Drawing.Color.ForestGreen;
+            this.submitbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.submitbtn.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.submitbtn.ForeColor = System.Drawing.Color.White;
+            this.submitbtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.submitbtn.Location = new System.Drawing.Point(172, 305);
+            this.submitbtn.Name = "submitbtn";
+            this.submitbtn.Size = new System.Drawing.Size(83, 28);
+            this.submitbtn.TabIndex = 29;
+            this.submitbtn.Text = "Submit";
+            this.submitbtn.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.submitbtn.UseVisualStyleBackColor = false;
+            this.submitbtn.Click += new System.EventHandler(this.submitbtn_Click);
+            // 
             // ForgotPassword
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -237,5 +256,6 @@
         private System.Windows.Forms.TextBox answertxt;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Button Retrievebtn;
+        private System.Windows.Forms.Button submitbtn;
     }
 }
